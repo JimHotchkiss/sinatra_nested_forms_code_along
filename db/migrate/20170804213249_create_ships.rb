@@ -1,6 +1,6 @@
 class CreateShips < ActiveRecord::Migration[5.1]
   def change
-    creatle_table :ships do |t|
+    create_table :ships do |t|
       t.string :name 
       t.string :type 
       t.string :booty
