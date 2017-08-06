@@ -11,13 +11,25 @@ module FormsLab
       # Nows, at this point, test your route.
     end
 
+    # Route for new page
+    get '/pirates/new' do
+      erb :'pirates/new'
+    end
+
     get '/pirates/:id' do
       #Good place to pause.  She throws in a binding.pry
       # and examines the convention /:id in depth!!!
       @pirate = Pirate.find(params["id"])
       #Render view
-      erb :'/pirates/show' 
+      erb :'/pirates/show'
     end
+
+    post '/pirates' do 
+      binding.pry
+
+    end
+
+
 
 
   end
